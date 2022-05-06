@@ -1,5 +1,5 @@
-let cont=document.querySelector("#scroll-content")
-var roll=1
+const cont=document.querySelector("#scroll-content")
+let roll=1
 function loadMoreContent(){
     for(let i=1;i<=20;i++){
         let h1=document.createElement("h1")
@@ -8,8 +8,6 @@ function loadMoreContent(){
     }
 }
 cont.addEventListener("scroll", function(){
-    // console.log(cont.scrollY)
-    // console.log(cont.innerHeight)
     if(cont.scrollTop + cont.clientHeight >= cont.scrollHeight){
         loadMoreContent();
     }
